@@ -7,10 +7,23 @@ services:
       dockerfile: Dockerfile
     container_name: invoice_app
     ports:
-      - "8080:8082"
+      - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:h2:mem:invoice_db
-      SPRING_DATASOURCE_USERNAME: admin_viewer
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/invoices_db
+      SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: password
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: invoices_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
     restart: always
