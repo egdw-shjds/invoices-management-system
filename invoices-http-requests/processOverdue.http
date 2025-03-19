@@ -1,0 +1,6 @@
+### POST request to process overdue invoices
+
+POST http://localhost:8080/invoices/processoverdue?lateFee=5000.0&overdueDays=5
+Content-Type: application/json
+
+###

@@ -1,0 +1,10 @@
+### POST request to pay invoices
+
+POST http://localhost:8080/invoices/2/payments
+Content-Type: application/json
+
+{
+  "amount": 600.0
+}
+
+###

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: invoice_app
+    ports:
+      - "8080:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:invoice_db
+      SPRING_DATASOURCE_USERNAME: admin_viewer
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    restart: always

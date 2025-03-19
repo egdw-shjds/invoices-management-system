@@ -1,0 +1,9 @@
+### POST request to create an invoice
+POST http://localhost:8080/invoices
+Content-Type: application/json
+
+{
+  "amount": 600.0,
+  "dueDate": "2025-03-17"
+}
+###
