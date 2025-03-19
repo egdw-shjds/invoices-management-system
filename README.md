@@ -16,6 +16,8 @@
 ## Backend
 The backend is built using Spring Boot and provides RESTful APIs for managing invoices. It uses PostgreSQL as the database and is containerized using Docker.
 
+## Installation and Setup
+
 ### Steps to Clone the Repository
 1. Open your terminal.
 2. Clone the repository:
