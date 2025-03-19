@@ -16,6 +16,25 @@
 ## Backend
 The backend is built using Spring Boot and provides RESTful APIs for managing invoices. It uses PostgreSQL as the database and is containerized using Docker.
 
+### Steps to Clone the Repository
+1. Open your terminal.
+2. Clone the repository:
+    ```sh
+    git clone https://github.com/your-username/invoices-management-system.git
+    ```
+3. Navigate to the project directory:
+    ```sh
+    cd invoices-management-system
+    ```
+
+### Steps to Setup the Backend
+1. Ensure you have Docker and Docker Compose installed on your machine. 
+2. Build and start the Docker containers:
+    ```sh
+    docker-compose up --build
+    ```
+3. The application will be available at `http://localhost:8080`.
+
 ## Usage
 You can use the following HTTP requests to interact with the application:
 
